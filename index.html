@@ -1,120 +1,17 @@
----
-layout: default
-title: "Mitsubishi Mini-Split Smart Controller — ESPHome & HomeKit"
-description: "Open-source ESP32 controller for Mitsubishi mini-splits via the CN105 port. Cloud-free climate control with ESPHome (Home Assistant) or HomeKit firmware."
----
-
-<div class="hero">
-  <h1>Smart Controller for Mitsubishi Mini-Splits</h1>
-  <p class="hero-lead">Cloud-free smart control with open source firmware.</p>
-  <div class="hero-actions">
-    <a href="/controller.html" class="btn">Buy Controller</a>
-    <a href="/flash.html" class="btn btn-outline">Flash Firmware</a>
-    <a href="/compatibility.html" class="btn btn-outline">Check Your Model</a>
-  </div>
-</div>
-
-<div class="value-props">
-  <a class="value-props__media" href="/controller.html" aria-label="See the pre-assembled Serin Controller">
-    <img src="/assets/serin_cn105_controller.jpg" alt="The Serin Controller — an M5Stack NanoC6 board with the CN105 cable attached" width="480" height="480">
-  </a>
-  <ul class="value-props__list">
-    <li>
-      <span class="value-props__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-      <div><strong>100% Local Control</strong><span>Your data stays in your home. No cloud, no fees, no privacy worries.</span></div>
-    </li>
-    <li>
-      <span class="value-props__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
-      <div><strong>Open Source</strong><span>Inspect, modify, and contribute to the firmware and tools.</span></div>
-    </li>
-    <li>
-      <span class="value-props__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 8z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>
-      <div><strong>Compact &amp; Clean</strong><span>Installs inside your mini-split for a seamless look.</span></div>
-    </li>
-    <li>
-      <span class="value-props__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
-      <div><strong>DIY or Pre-Assembled</strong><span>Build it yourself or <a href="/controller.html">order a pre-assembled controller</a> with board and CN105 cable included. It plugs in with no soldering.</span></div>
-    </li>
-  </ul>
-</div>
-
-<h2>How It Compares</h2>
-<p class="compare-intro">There are several ways to add smart control to a Mitsubishi mini-split. This one uses the CN105 port for direct, two-way control. Here's how they compare.</p>
-<div class="table-wrapper">
-  <table class="compare-table">
-    <thead>
-      <tr>
-        <th><span class="visually-hidden">Feature</span></th>
-        <th class="compare-highlight">CN105 Serial</th>
-        <th>Cloud Adapter</th>
-        <th>IR Blaster</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Cost</strong></td>
-        <td class="compare-highlight">~$15&ndash;20 DIY<br>$35 <a href="/controller.html">pre-assembled</a></td>
-        <td>~$180</td>
-        <td>~$15</td>
-      </tr>
-      <tr>
-        <td><strong>Connection</strong></td>
-        <td class="compare-highlight">Direct (CN105)</td>
-        <td>Cloud-dependent</td>
-        <td>Line-of-sight IR</td>
-      </tr>
-      <tr>
-        <td><strong>Feedback</strong></td>
-        <td class="compare-highlight">Real-time, bidirectional</td>
-        <td>Yes, via cloud</td>
-        <td>None — no confirmation</td>
-      </tr>
-      <tr>
-        <td><strong>Privacy</strong></td>
-        <td class="compare-highlight">100% local</td>
-        <td>Data sent to cloud</td>
-        <td>Local</td>
-      </tr>
-      <tr>
-        <td><strong>Source</strong></td>
-        <td class="compare-highlight">Open source</td>
-        <td>Proprietary</td>
-        <td>Varies</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h2 id="platforms">Choose Your Platform</h2>
-<div class="platform-chooser">
-  <div class="platform-card card-esphome">
-    <img src="/assets/esphome-logo.svg" alt="ESPHome logo" class="platform-logo">
-    <h3>ESPHome</h3>
-    <p>Built on <a href="https://github.com/echavet/MitsubishiCN105ESPHome" target="_blank" rel="noopener">MitsubishiCN105ESPHome</a>. Serin Labs provides curated configs, browser flashing, and a <a href="/esphome/generate-yaml.html">YAML generator</a>.</p>
-    <a href="/flash.html?platform=esphome" class="btn btn-esphome">Flash Firmware</a>
-    <a href="/esphome/setup.html" class="setup-link">Setup Guide &rarr;</a>
-  </div>
-  <div class="platform-card card-homekit">
-    <img src="/assets/house.svg" alt="" class="platform-logo">
-    <h3>HomeKit-Compatible</h3>
-    <p>For use with the <strong>Apple Home</strong> app — no extra app, cloud, or subscription. See the <a href="/homekit/features.html">full feature list</a>.</p>
-    <a href="/flash.html?platform=homekit" class="btn btn-homekit">Flash Firmware</a>
-    <a href="/homekit/setup.html" class="setup-link">Setup Guide &rarr;</a>
-  </div>
-</div>
-
-<h2>Quick Start</h2>
-<div class="quick-start">
-  <ol>
-    <li><strong>Get the Hardware:</strong> <a href="/parts.html">Board + cable</a>, or a <a href="/controller.html">pre-assembled controller</a>. <a href="/compatibility.html">Check your model</a> first.</li>
-    <li><strong>Flash the Firmware:</strong> Use the <a href="/flash.html">flash tool</a> to install ESPHome or HomeKit-compatible firmware from your browser.</li>
-    <li><strong>Follow Your Setup Guide:</strong> <a href="/esphome/setup.html">ESPHome setup</a> or <a href="/homekit/setup.html">HomeKit-compatible setup</a>.</li>
-    <li><strong>Install in Your HVAC:</strong> Power off, connect the <a href="/wiring.html">CN105-to-Grove cable</a>, tuck the device inside, and restore power.</li>
-  </ol>
-  <p class="quick-start-note">Have multiple indoor units? Each one has its own CN105 port and needs its own controller. Repeat these steps for each unit, giving every device a unique name.</p>
-</div>
-
-<h2>Credits & Open Source</h2>
-<p>Built on open-source work by <a href="https://github.com/echavet/MitsubishiCN105ESPHome" target="_blank" rel="noopener">echavet</a> (ESPHome component), Espressif's <a href="https://github.com/espressif/esp-homekit-sdk" target="_blank" rel="noopener">esp-homekit-sdk</a> (HomeKit-compatible firmware), and foundational protocol work by <a href="https://github.com/SwiCago/HeatPump" target="_blank" rel="noopener">SwiCago</a> and <a href="https://github.com/geoffdavis/esphome-mitsubishiheatpump" target="_blank" rel="noopener">geoffdavis</a>. <a href="https://github.com/Serin-Labs/serin-cn105/discussions" target="_blank" rel="noopener">Ask a question</a> or <a href="https://github.com/Serin-Labs/serin-cn105/issues" target="_blank" rel="noopener">report an issue</a> on GitHub. An independent open-source project, provided as-is. See <a href="/policies.html">policies</a> for the full disclaimer, returns, and warranty terms.</p>
-
-<p class="closing-cta">Ready? <a href="/compatibility.html">Check your model &rarr;</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serin Labs has moved to serin-labs.com</title>
+  <link rel="canonical" href="https://serin-labs.com/">
+  <meta http-equiv="refresh" content="0; url=https://serin-labs.com/">
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 6rem auto; padding: 0 1.5rem; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>Serin Labs has moved</h1>
+  <p>This site now lives at <a href="https://serin-labs.com/">serin-labs.com</a>.</p>
+</body>
+</html>
